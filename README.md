@@ -3,8 +3,6 @@
 This guide demonstrates how to deploy a Node.js application to Amazon Elastic Kubernetes Service (EKS) using GitHub Actions.
 
 ## Prerequisites
-
-Ensure you have the following prerequisites installed and configured:
 - Docker
 - GitHub Actions
 - ECR (Elastic Container Registry)
@@ -16,7 +14,7 @@ Ensure you have the following prerequisites installed and configured:
 
 ### 1. Create an ECR repository
 
-<img src="assets/repo.png" width="400">
+<img src="assets/repo.png" width="600">
 
 ### 2. Set up GitHub Actions Workflow
 
@@ -24,7 +22,7 @@ Create a [YAML file](https://github.com/teeseira/eks-deployment-actions/blob/mai
 
 ### 3. Create an EKS Cluster
 
-<img src="assets/cluster.png" width="400">
+<img src="assets/cluster.png" width="600">
 
 ### 4. Push Files to GitHub
 
@@ -46,5 +44,4 @@ Retrieve the DNS name of your service:
 kubectl get service
 ```
 <img src="assets/externalip.png">
-<br><br>
 <img src="assets/test.png" width="500">
