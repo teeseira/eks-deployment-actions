@@ -14,15 +14,19 @@ This guide demonstrates how to deploy a Node.js application to Amazon Elastic Ku
 
 ### 1. Create an ECR repository
 
-<img src="assets/repo.png" width="600">
+```
+aws ecr create-repository --repository-name [desired-name]
+```
 
 ### 2. Set up GitHub Actions Workflow
 
 Create a [YAML file](https://github.com/teeseira/eks-deployment-actions/blob/main/.github/workflows/github-actions-ci.yml) for your workflow.
 
-### 3. Create an EKS Cluster
+### 3. Create an EKS Cluster with Node groups
 
-<img src="assets/cluster.png" width="600">
+```
+eksctl create cluster --name [desired-name] --region us-east-1 --nodegroup-name [desired-name] --node-type t2.micro --nodes [desired-integer]
+```
 
 ### 4. Push Files to GitHub
 
